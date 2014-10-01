@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var port = process.env.PORT || 3000;
+
 var router = express.Router();
 
 router.get('/',function(req,res){
@@ -13,5 +15,5 @@ router.get('/:name',function(req,res){
 
 app.use('/',router);
 
-app.listen(8080);
-console.log('Listening on port 8080');
+app.listen(port);
+console.log('Listening on port ' + port);
